@@ -1,3 +1,13 @@
+'''
+Though our linear classification (logistic regression) model performed well after feature engineering, it may be too simple of a model to fully capture the relationship between the features and the label. Using the same dataset and labels as you did in Task 6 to create the model ecommerce.classification_model_2, your challenge is to create a XGBoost Classifier.
+
+Note: Hint : Use following options for Boosted_Tree_Classifier:
+1. L2_reg = 0.1
+2. num_parallel_tree = 8
+3. max_tree_depth = 10
+You may need to look at the documentation linked above to see the exact syntax. The model will take around 7 minutes to train. The solution can be found in the solution section below if you need help writing the query. pa
+'''
+
 CREATE OR REPLACE MODEL `ecommerce.classification_model_3`
         OPTIONS
           (model_type='BOOSTED_TREE_CLASSIFIER' , l2_reg = 0.1, num_parallel_tree = 8, max_tree_depth = 10,
